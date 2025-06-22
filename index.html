@@ -15,24 +15,25 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #0c0d23;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
       color: #fff;
       line-height: 1.6;
     }
 
     header {
-      background-color: #0c0d23;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      background: rgba(12, 13, 35, 0.8);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 4vw;
-      position: sticky;
-      top: 0;
-      z-index: 999;
+      padding: 1.2rem 4vw;
+      z-index: 1000;
     }
 
     header img {
-      height: 40px;
+      height: 42px;
     }
 
     nav a {
@@ -40,25 +41,34 @@
       text-decoration: none;
       margin: 0 1.2rem;
       font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00e676;
     }
 
     .join-btn {
       background-color: #00e676;
       color: #000;
       border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
       font-weight: 600;
       cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .join-btn:hover {
+      transform: scale(1.05);
     }
 
     .hero {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 6rem 4vw;
-      background: linear-gradient(135deg, #292c6d, #191a36);
-      flex-wrap: wrap;
+      align-items: center;
+      padding: 5rem 4vw;
+      gap: 2rem;
     }
 
     .hero-text {
@@ -66,23 +76,24 @@
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       margin-bottom: 1.2rem;
     }
 
     .hero p {
       color: #d1d1d1;
-      margin-bottom: 2rem;
       font-size: 1.1rem;
+      margin-bottom: 2rem;
     }
 
     .hero-buttons button {
       margin-right: 1rem;
-      padding: 0.7rem 1.4rem;
+      padding: 0.75rem 1.5rem;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
       font-weight: 600;
+      font-size: 1rem;
     }
 
     .download {
@@ -91,72 +102,50 @@
     }
 
     .learn {
-      background-color: #000;
+      background-color: #111;
       color: #fff;
     }
 
     .hero img {
-      height: 400px;
+      width: 280px;
       border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-      margin-top: 2rem;
-      max-width: 90vw;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     }
 
     .section {
       text-align: center;
-      padding: 4rem 2rem;
-      background-color: #131432;
+      padding: 5rem 2rem;
+      background-color: rgba(255, 255, 255, 0.02);
     }
 
     .section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
     }
 
     .section p {
       color: #ccc;
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto 2rem;
+      font-size: 1.05rem;
     }
 
-    .section .join-now,
-    .section .learn-more {
+    .section button {
       background-color: #00e676;
       color: #000;
       border: none;
-      padding: 0.7rem 1.4rem;
-      border-radius: 4px;
+      padding: 0.75rem 1.4rem;
+      border-radius: 6px;
       font-weight: 600;
       cursor: pointer;
     }
 
-    .cta {
-      background-color: #20224a;
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .cta h3 {
-      font-size: 1.7rem;
-      margin-bottom: 1rem;
-    }
-
-    .cta a {
-      background-color: #00e676;
-      color: #000;
-      padding: 0.6rem 1.2rem;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 600;
-    }
-
     footer {
-      background-color: #0c0d23;
+      background-color: #090a1a;
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      color: #666;
+      color: #777;
     }
   </style>
 </head>
@@ -176,7 +165,7 @@
   <section class="hero">
     <div class="hero-text">
       <h1>Simplifying Digital Payments<br>for Everyone</h1>
-      <p>Experience fast, secure, and easy-to-use payment solutions for your everyday transactions.</p>
+      <p>Experience lightning-fast, secure, and intuitive financial transactions designed for modern users and merchants across India.</p>
       <div class="hero-buttons">
         <button class="download">Download APK</button>
         <button class="learn">Learn More</button>
@@ -187,19 +176,14 @@
 
   <section class="section">
     <h2>Accept Payments with Momo Pe</h2>
-    <p>Join our growing network of merchants and offer seamless payment experiences to your customers.</p>
-    <button class="join-now">Join Now</button>
+    <p>Seamlessly onboard and empower your business with robust tools, analytics, and payment experiences tailored for growth.</p>
+    <button>Join Now</button>
   </section>
 
   <section class="section">
     <h2>Learn More About Our Story</h2>
-    <p>Discover our mission, vision, and the values that drive us to innovate in the digital payments space.</p>
-    <a class="learn-more" href="about.html">Learn More</a>
-  </section>
-
-  <section class="cta">
-    <h3>Ready to experience the future of digital payments?</h3>
-    <a href="#">Get Started</a>
+    <p>Discover our vision, our roots, and the journey that shapes every feature of Momo Pe to serve you better.</p>
+    <button onclick="window.location.href='about.html'">Learn More</button>
   </section>
 
   <footer>
