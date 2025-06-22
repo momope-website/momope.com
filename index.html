@@ -1,194 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+import React from "react";
+import { Button } from "@/components/ui/button";
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Momo Pe | Simplifying Digital Payments</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-[#0c0d23] to-[#191a36] text-white font-sans">
+      {/* Navigation */}
+      <header className="sticky top-0 z-50 bg-[#0c0d23] border-b border-white/10 shadow-md py-4 px-6 flex justify-between items-center">
+        <div className="flex items-center gap-2">
+          <img src="/logo.png" alt="Momo Pe Logo" className="h-10" />
+          <span className="font-bold text-xl tracking-wide">Momo Pe</span>
+        </div>
+        <nav className="space-x-6 text-sm font-medium">
+          <a href="#download" className="hover:text-[#00e676]">Download</a>
+          <a href="#merchants" className="hover:text-[#00e676]">Merchants</a>
+          <a href="#careers" className="hover:text-[#00e676]">Careers</a>
+          <a href="/about.html" className="hover:text-[#00e676]">About</a>
+        </nav>
+        <Button className="bg-[#00e676] text-black font-bold hover:scale-105">Join Now</Button>
+      </header>
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-      color: #fff;
-      line-height: 1.6;
-    }
+      {/* Hero Section */}
+      <section className="flex flex-col md:flex-row items-center justify-between px-10 py-20 gap-10 bg-gradient-to-r from-[#1f2155] to-[#292c6d]">
+        <div className="max-w-xl">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+            Simplifying <span className="text-[#00e676]">Digital Payments</span> for Everyone
+          </h1>
+          <p className="text-gray-300 text-lg mb-6">
+            Experience fast, secure, and easy-to-use payment solutions that empower your everyday transactions.
+          </p>
+          <div className="flex gap-4">
+            <Button className="bg-[#00e676] text-black font-semibold">Download APK</Button>
+            <Button variant="secondary" className="bg-black text-white border border-white">Learn More</Button>
+          </div>
+        </div>
+        <div className="">
+          <img
+            src="/app-preview.jpg"
+            alt="App Preview"
+            className="w-80 h-auto rounded-xl shadow-xl hover:scale-105 transition"
+          />
+        </div>
+      </section>
 
-    header {
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(8px);
-      background: rgba(12, 13, 35, 0.8);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 4vw;
-      z-index: 1000;
-    }
+      {/* Merchants Section */}
+      <section id="merchants" className="text-center py-20 bg-[#131432]">
+        <h2 className="text-3xl font-bold mb-4">Accept Payments with Momo Pe</h2>
+        <p className="text-gray-400 max-w-2xl mx-auto mb-6">
+          Join our growing network of merchants and offer seamless payment experiences across India with ease.
+        </p>
+        <Button className="bg-[#00e676] text-black font-bold">Join Now</Button>
+      </section>
 
-    header img {
-      height: 42px;
-    }
+      {/* About Teaser */}
+      <section className="text-center py-20 bg-[#0c0d23]">
+        <h2 className="text-3xl font-bold mb-4">Learn More About Our Story</h2>
+        <p className="text-gray-400 max-w-2xl mx-auto mb-6">
+          Discover our mission, vision, and the values that drive us to innovate and create a trusted, inclusive financial ecosystem.
+        </p>
+        <Button className="bg-[#00e676] text-black font-bold" asChild>
+          <a href="/about.html">Learn More</a>
+        </Button>
+      </section>
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 1.2rem;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #00e676;
-    }
-
-    .join-btn {
-      background-color: #00e676;
-      color: #000;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .join-btn:hover {
-      transform: scale(1.05);
-    }
-
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5rem 4vw;
-      gap: 2rem;
-    }
-
-    .hero-text {
-      max-width: 600px;
-    }
-
-    .hero h1 {
-      font-size: 3.2rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .hero p {
-      color: #d1d1d1;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-
-    .hero-buttons button {
-      margin-right: 1rem;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    .download {
-      background-color: #00e676;
-      color: #000;
-    }
-
-    .learn {
-      background-color: #111;
-      color: #fff;
-    }
-
-    .hero img {
-      width: 280px;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-    }
-
-    .section {
-      text-align: center;
-      padding: 5rem 2rem;
-      background-color: rgba(255, 255, 255, 0.02);
-    }
-
-    .section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .section p {
-      color: #ccc;
-      max-width: 720px;
-      margin: 0 auto 2rem;
-      font-size: 1.05rem;
-    }
-
-    .section button {
-      background-color: #00e676;
-      color: #000;
-      border: none;
-      padding: 0.75rem 1.4rem;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    footer {
-      background-color: #090a1a;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <img src="logo.png" alt="Momo Pe Logo" />
-    <nav>
-      <a href="#">Download</a>
-      <a href="#">Merchants</a>
-      <a href="#">Careers</a>
-      <a href="about.html">About</a>
-    </nav>
-    <button class="join-btn">Join Now</button>
-  </header>
-
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Simplifying Digital Payments<br>for Everyone</h1>
-      <p>Experience lightning-fast, secure, and intuitive financial transactions designed for modern users and merchants across India.</p>
-      <div class="hero-buttons">
-        <button class="download">Download APK</button>
-        <button class="learn">Learn More</button>
-      </div>
-    </div>
-    <img src="app-preview.jpg" alt="App Preview">
-  </section>
-
-  <section class="section">
-    <h2>Accept Payments with Momo Pe</h2>
-    <p>Seamlessly onboard and empower your business with robust tools, analytics, and payment experiences tailored for growth.</p>
-    <button>Join Now</button>
-  </section>
-
-  <section class="section">
-    <h2>Learn More About Our Story</h2>
-    <p>Discover our vision, our roots, and the journey that shapes every feature of Momo Pe to serve you better.</p>
-    <button onclick="window.location.href='about.html'">Learn More</button>
-  </section>
-
-  <footer>
-    &copy; 2025 Momo Pe Digital Hub Pvt. Ltd. All rights reserved.
-  </footer>
-</body>
-
-</html>
+      {/* Footer */}
+      <footer className="bg-[#0c0d23] text-center text-sm text-gray-500 py-6 border-t border-white/10">
+        © 2025 Momo Pe Digital Hub Pvt. Ltd. All rights reserved.
+      </footer>
+    </main>
+  );
+}
