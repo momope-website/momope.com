@@ -7,17 +7,11 @@
   <title>About | Momo Pe</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #0c0d23;
       color: #fff;
-      line-height: 1.7;
     }
 
     header {
@@ -26,9 +20,6 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.5rem 4vw;
-      position: sticky;
-      top: 0;
-      z-index: 999;
     }
 
     nav a {
@@ -48,93 +39,38 @@
       cursor: pointer;
     }
 
-    .about-hero {
-      background: linear-gradient(135deg, #20224d, #131432);
-      padding: 5rem 4vw;
-      text-align: center;
-    }
-
-    .about-hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .about-hero p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #ccc;
-      font-size: 1.1rem;
-    }
-
-    .highlight-section {
-      padding: 4rem 4vw;
-      background-color: #111230;
-    }
-
-    .highlight-section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #00e676;
-      text-align: center;
-    }
-
-    .highlight-section .content {
-      max-width: 900px;
-      margin: 0 auto;
-      color: #ccc;
-      font-size: 1rem;
-    }
-
-    .values {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 2.5rem;
-      flex-wrap: wrap;
-    }
-
-    .value {
-      background-color: #1b1c3a;
-      padding: 1.5rem;
+    .about-container {
+      max-width: 800px;
+      margin: 5rem auto;
+      background-color: #1c1d3b;
+      padding: 3rem;
       border-radius: 10px;
-      width: 280px;
-      margin: 1rem;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     }
 
-    .value h3 {
-      margin-bottom: 0.8rem;
-      color: #00e676;
-    }
-
-    .cta-section {
-      background-color: #00e676;
-      color: #000;
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-
-    .cta-section h2 {
-      font-size: 2rem;
+    .about-container h1 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
-    .cta-section p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto 1.5rem;
+    .about-container p {
+      color: #ccc;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
     }
 
-    .cta-section a {
-      background-color: #000;
-      color: #00e676;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
+    .pillars {
+      margin-top: 2rem;
+    }
+
+    .pillar {
+      background-color: #292c6d;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.2rem;
     }
 
     footer {
-      background-color: #0c0d23;
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
@@ -145,7 +81,7 @@
 
 <body>
   <header>
-    <img src="logo.png" alt="Momo Pe Logo" height="40">
+    <img src="logo.png" alt="Momo Pe Logo" style="height: 40px;">
     <nav>
       <a href="index.html">Home</a>
       <a href="#">Download</a>
@@ -155,45 +91,29 @@
     <button class="join-btn">Join Now</button>
   </header>
 
-  <section class="about-hero">
+  <main class="about-container">
     <h1>About Momo Pe</h1>
-    <p>Momo Pe Digital Hub is on a mission to simplify and democratize digital payments in India through seamless, secure, and inclusive solutions for every user and merchant.</p>
-  </section>
+    <p>Momo Pe Digital Hub is redefining how India experiences digital payments. We build modern, reliable, and inclusive financial infrastructure for individuals and businesses alike.</p>
 
-  <section class="highlight-section">
-    <h2>Our Mission & Vision</h2>
-    <div class="content">
-      <p>
-        We aim to empower every Indian—urban or rural—with fast, intuitive digital payment experiences that are accessible anytime, anywhere. We believe financial empowerment is a right, not a luxury.
-        <br><br>
-        Our vision is to be the most trusted and loved digital payments brand by enabling effortless transactions and promoting financial inclusion at scale.
-      </p>
-    </div>
-  </section>
+    <p>Our goal is to bridge the digital divide by providing intuitive, secure, and fast payment solutions. We empower users to manage, send, and receive payments effortlessly, helping them stay connected in a growing digital economy.</p>
 
-  <section class="highlight-section">
-    <h2>Our Core Values</h2>
-    <div class="values">
-      <div class="value">
-        <h3>Innovation</h3>
-        <p>We challenge the status quo to create futuristic solutions that change the way India pays.</p>
-      </div>
-      <div class="value">
-        <h3>Accessibility</h3>
-        <p>We design products that are inclusive, simple, and usable by everyone—no matter their background.</p>
-      </div>
-      <div class="value">
-        <h3>Trust</h3>
-        <p>We are deeply committed to safety, privacy, and ethical business practices in everything we build.</p>
-      </div>
-    </div>
-  </section>
+    <p>With a commitment to user trust, accessibility, and innovation, we continue to evolve, ensuring we remain at the forefront of India's fintech revolution.</p>
 
-  <section class="cta-section">
-    <h2>Join the Digital Payment Revolution</h2>
-    <p>Whether you're a user, merchant, or curious innovator—come shape the future of money with Momo Pe.</p>
-    <a href="#">Get Started</a>
-  </section>
+    <section class="pillars">
+      <div class="pillar">
+        <h3>Our Vision</h3>
+        <p>To empower a financially inclusive future where digital transactions are effortless and secure for everyone.</p>
+      </div>
+      <div class="pillar">
+        <h3>Our Mission</h3>
+        <p>To provide a robust and user-friendly payment ecosystem that bridges the gap between users and digital finance tools.</p>
+      </div>
+      <div class="pillar">
+        <h3>Our Values</h3>
+        <p>Innovation, accessibility, transparency, trust, and user-centricity are at the heart of every solution we create.</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 Momo Pe Digital Hub Pvt. Ltd. All rights reserved.
