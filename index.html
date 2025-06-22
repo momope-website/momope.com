@@ -4,162 +4,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Momo Pe | Simplifying Payments</title>
-  <link rel="icon" href="icon.png" type="image/png">
+  <title>Momo Pe | Simplifying Digital Payments</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
     }
 
     body {
-      background-color: #0f0f2d;
+      font-family: 'Inter', sans-serif;
+      background-color: #0e0f1a;
       color: #ffffff;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #080820;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 20px 60px;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #12132b;
     }
 
-    .logo img {
+    header img {
       height: 40px;
     }
 
     nav a {
-      color: #ffffff;
-      margin: 0 15px;
+      color: #ccc;
       text-decoration: none;
+      margin: 0 1rem;
       font-weight: 500;
+      transition: color 0.3s;
     }
 
-    .cta {
-      background-color: #00e676;
-      color: #000;
-      padding: 10px 20px;
-      border-radius: 5px;
+    nav a:hover {
+      color: #00e68a;
+    }
+
+    .btn {
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 8px;
       font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-primary {
+      background: #00e68a;
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      background: #00cc77;
     }
 
     .hero {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      padding: 80px 60px;
-      background: linear-gradient(to right, #1f1f6d, #301c5c);
+      padding: 4rem 6rem;
+      background: linear-gradient(135deg, #1c1f4a, #2c2e5a);
     }
 
     .hero-text {
-      max-width: 50%;
+      max-width: 600px;
     }
 
     .hero-text h1 {
-      font-size: 48px;
-      line-height: 1.2;
-      margin-bottom: 20px;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
     }
 
     .hero-text p {
-      font-size: 18px;
-      margin-bottom: 30px;
-      color: #cfd8dc;
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
     }
 
-    .hero-buttons button {
-      margin-right: 15px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .btn-green {
-      background-color: #00e676;
-      color: #000;
-    }
-
-    .btn-dark {
-      background-color: #111;
-      color: #fff;
-    }
-
-    .hero-img img {
-      max-width: 300px;
-      border-radius: 10px;
+    .hero-image img {
+      width: 300px;
+      border-radius: 16px;
+      box-shadow: 0 0 40px rgba(0, 230, 138, 0.2);
     }
 
     .section {
-      padding: 60px;
+      padding: 4rem 6rem;
+      background-color: #151630;
       text-align: center;
-      background-color: #101033;
     }
 
     .section h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
     }
 
     .section p {
-      color: #b0bec5;
-      margin-bottom: 30px;
+      font-size: 1rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto 2rem;
     }
 
     footer {
-      background-color: #0b0b1f;
+      padding: 1.5rem;
+      background-color: #0a0b18;
       text-align: center;
-      padding: 20px;
-      color: #90a4ae;
-    }
-
-    @media screen and (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-text,
-      .hero-img {
-        max-width: 100%;
-      }
-
-      .hero-img {
-        margin-top: 30px;
-      }
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="Momo Pe Logo" />
-    </div>
+    <img src="logo.png" alt="Momo Pe Logo" />
     <nav>
       <a href="#">Download</a>
       <a href="#">Merchants</a>
       <a href="#">Careers</a>
       <a href="#">About</a>
-      <a href="#" class="cta">Join Now</a>
     </nav>
+    <button class="btn btn-primary">Join Now</button>
   </header>
 
   <section class="hero">
     <div class="hero-text">
-      <h1>Simplifying Digital Payments<br>for Everyone</h1>
+      <h1>Simplifying Digital Payments for Everyone</h1>
       <p>Experience fast, secure, and easy-to-use payment solutions for your everyday transactions.</p>
-      <div class="hero-buttons">
-        <button class="btn-green">Download APK</button>
-        <button class="btn-dark">Learn More</button>
-      </div>
+      <button class="btn btn-primary" style="margin-right: 1rem;">Download APK</button>
+      <button class="btn" style="background:#111; color: #fff;">Learn More</button>
     </div>
-    <div class="hero-img">
+    <div class="hero-image">
       <img src="app-preview.jpg" alt="App Preview" />
     </div>
   </section>
@@ -167,13 +149,13 @@
   <section class="section">
     <h2>Accept Payments with Momo Pe</h2>
     <p>Join our growing network of merchants and offer seamless payment experiences to your customers.</p>
-    <button class="btn-green">Join Now</button>
+    <button class="btn btn-primary">Join Now</button>
   </section>
 
-  <section class="section" style="background-color: #0d0d2a;">
+  <section class="section">
     <h2>Learn More About Our Story</h2>
     <p>Discover our mission, vision, and the values that drive us to innovate in the digital payments space.</p>
-    <button class="btn-green">Learn More</button>
+    <button class="btn btn-primary">Learn More</button>
   </section>
 
   <footer>
@@ -182,4 +164,3 @@
 </body>
 
 </html>
-
