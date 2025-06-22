@@ -4,20 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Momo Pe | Simplifying Digital Payments</title>
+  <title>About | Momo Pe</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #0c0d23;
       color: #fff;
-      line-height: 1.6;
     }
 
     header {
@@ -26,13 +20,6 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.5rem 4vw;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    header img {
-      height: 40px;
     }
 
     nav a {
@@ -52,89 +39,38 @@
       cursor: pointer;
     }
 
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 5rem 4vw;
-      background: linear-gradient(135deg, #292c6d, #191a36);
+    .about-container {
+      max-width: 800px;
+      margin: 5rem auto;
+      background-color: #1c1d3b;
+      padding: 3rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     }
 
-    .hero-text {
-      max-width: 600px;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .hero p {
-      color: #d1d1d1;
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-    }
-
-    .hero-buttons button {
-      margin-right: 1rem;
-      padding: 0.7rem 1.4rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    .download {
-      background-color: #00e676;
-      color: #000;
-    }
-
-    .learn {
-      background-color: #000;
-      color: #fff;
-    }
-
-    .hero img {
-      height: 350px;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
-    }
-
-    .hero img:hover {
-      transform: scale(1.05);
-    }
-
-    .section {
-      text-align: center;
-      padding: 4rem 2rem;
-      background-color: #131432;
-    }
-
-    .section h2 {
-      font-size: 2rem;
+    .about-container h1 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
-    .section p {
+    .about-container p {
       color: #ccc;
-      max-width: 700px;
-      margin: 0 auto 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
     }
 
-    .section .join-now,
-    .section .learn-more {
-      background-color: #00e676;
-      color: #000;
-      border: none;
-      padding: 0.7rem 1.4rem;
-      border-radius: 4px;
-      font-weight: 600;
-      cursor: pointer;
+    .pillars {
+      margin-top: 2rem;
+    }
+
+    .pillar {
+      background-color: #292c6d;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.2rem;
     }
 
     footer {
-      background-color: #0c0d23;
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
@@ -145,39 +81,39 @@
 
 <body>
   <header>
-    <img src="logo.png" alt="Momo Pe Logo" />
+    <img src="logo.png" alt="Momo Pe Logo" style="height: 40px;">
     <nav>
+      <a href="index.html">Home</a>
       <a href="#">Download</a>
       <a href="#">Merchants</a>
       <a href="#">Careers</a>
-      <a href="about.html">About</a>
     </nav>
     <button class="join-btn">Join Now</button>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Simplifying Digital Payments<br>for Everyone</h1>
-      <p>Experience fast, secure, and easy-to-use payment solutions for your everyday transactions.</p>
-      <div class="hero-buttons">
-        <button class="download">Download APK</button>
-        <button class="learn">Learn More</button>
+  <main class="about-container">
+    <h1>About Momo Pe</h1>
+    <p>Momo Pe Digital Hub is redefining how India experiences digital payments. We build modern, reliable, and inclusive financial infrastructure for individuals and businesses alike.</p>
+
+    <p>Our goal is to bridge the digital divide by providing intuitive, secure, and fast payment solutions. We empower users to manage, send, and receive payments effortlessly, helping them stay connected in a growing digital economy.</p>
+
+    <p>With a commitment to user trust, accessibility, and innovation, we continue to evolve, ensuring we remain at the forefront of India's fintech revolution.</p>
+
+    <section class="pillars">
+      <div class="pillar">
+        <h3>Our Vision</h3>
+        <p>To empower a financially inclusive future where digital transactions are effortless and secure for everyone.</p>
       </div>
-    </div>
-    <img src="app-preview.jpg" alt="App Preview">
-  </section>
-
-  <section class="section">
-    <h2>Accept Payments with Momo Pe</h2>
-    <p>Join our growing network of merchants and offer seamless payment experiences to your customers.</p>
-    <button class="join-now">Join Now</button>
-  </section>
-
-  <section class="section">
-    <h2>Learn More About Our Story</h2>
-    <p>Discover our mission, vision, and the values that drive us to innovate in the digital payments space.</p>
-    <button class="learn-more" onclick="location.href='about.html'">Learn More</button>
-  </section>
+      <div class="pillar">
+        <h3>Our Mission</h3>
+        <p>To provide a robust and user-friendly payment ecosystem that bridges the gap between users and digital finance tools.</p>
+      </div>
+      <div class="pillar">
+        <h3>Our Values</h3>
+        <p>Innovation, accessibility, transparency, trust, and user-centricity are at the heart of every solution we create.</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 Momo Pe Digital Hub Pvt. Ltd. All rights reserved.
