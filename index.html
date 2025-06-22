@@ -56,8 +56,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 5rem 4vw;
+      padding: 6rem 4vw;
       background: linear-gradient(135deg, #292c6d, #191a36);
+      flex-wrap: wrap;
     }
 
     .hero-text {
@@ -95,14 +96,11 @@
     }
 
     .hero img {
-      height: 350px;
+      height: 400px;
       border-radius: 20px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
-    }
-
-    .hero img:hover {
-      transform: scale(1.05);
+      margin-top: 2rem;
+      max-width: 90vw;
     }
 
     .section {
@@ -133,6 +131,26 @@
       cursor: pointer;
     }
 
+    .cta {
+      background-color: #20224a;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .cta h3 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta a {
+      background-color: #00e676;
+      color: #000;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
     footer {
       background-color: #0c0d23;
       text-align: center;
@@ -161,7 +179,7 @@
       <p>Experience fast, secure, and easy-to-use payment solutions for your everyday transactions.</p>
       <div class="hero-buttons">
         <button class="download">Download APK</button>
-        <button class="learn" onclick="location.href='about.html'">Learn More</button>
+        <button class="learn">Learn More</button>
       </div>
     </div>
     <img src="app-preview.jpg" alt="App Preview">
@@ -176,7 +194,12 @@
   <section class="section">
     <h2>Learn More About Our Story</h2>
     <p>Discover our mission, vision, and the values that drive us to innovate in the digital payments space.</p>
-    <button class="learn-more" onclick="location.href='about.html'">Learn More</button>
+    <a class="learn-more" href="about.html">Learn More</a>
+  </section>
+
+  <section class="cta">
+    <h3>Ready to experience the future of digital payments?</h3>
+    <a href="#">Get Started</a>
   </section>
 
   <footer>
