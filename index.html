@@ -17,17 +17,22 @@
       font-family: 'Inter', sans-serif;
       background-color: #0c0d23;
       color: #fff;
+      line-height: 1.6;
     }
 
     header {
       background-color: #0c0d23;
-      padding: 1.5rem 4vw;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 1.5rem 4vw;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
+    }
+
+    header img {
+      height: 40px;
     }
 
     nav a {
@@ -35,11 +40,6 @@
       text-decoration: none;
       margin: 0 1.2rem;
       font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #00e676;
     }
 
     .join-btn {
@@ -50,11 +50,6 @@
       border-radius: 6px;
       font-weight: 600;
       cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .join-btn:hover {
-      transform: scale(1.05);
     }
 
     .hero {
@@ -63,18 +58,6 @@
       justify-content: space-between;
       padding: 5rem 4vw;
       background: linear-gradient(135deg, #292c6d, #191a36);
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     .hero-text {
@@ -84,18 +67,6 @@
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1.2rem;
-      animation: slideRight 1s ease-in-out;
-    }
-
-    @keyframes slideRight {
-      from {
-        transform: translateX(-30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
     }
 
     .hero p {
@@ -111,7 +82,6 @@
       border-radius: 4px;
       cursor: pointer;
       font-weight: 600;
-      transition: background 0.3s, transform 0.3s;
     }
 
     .download {
@@ -124,33 +94,21 @@
       color: #fff;
     }
 
-    .hero-buttons button:hover {
-      transform: translateY(-2px);
-    }
-
     .hero img {
       height: 350px;
       border-radius: 20px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-      animation: scaleUp 1.5s ease-in-out;
+      transition: transform 0.3s ease;
     }
 
-    @keyframes scaleUp {
-      from {
-        transform: scale(0.8);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
+    .hero img:hover {
+      transform: scale(1.05);
     }
 
     .section {
       text-align: center;
       padding: 4rem 2rem;
       background-color: #131432;
-      animation: fadeIn 1.5s ease-in;
     }
 
     .section h2 {
@@ -173,12 +131,33 @@
       border-radius: 4px;
       font-weight: 600;
       cursor: pointer;
-      transition: transform 0.3s ease;
+      text-decoration: none;
     }
 
-    .section .join-now:hover,
-    .section .learn-more:hover {
-      transform: translateY(-2px);
+    .clients {
+      background-color: #0c0d23;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .clients h3 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .clients-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+
+    .clients-logos img {
+      height: 80px;
+      object-fit: contain;
+      background-color: #fff;
+      padding: 0.5rem;
+      border-radius: 10px;
     }
 
     footer {
@@ -193,23 +172,23 @@
 
 <body>
   <header>
-    <img src="logo.png" alt="Momo Pe Logo" style="height: 40px;">
+    <img src="logo.png" alt="Momo Pe Logo" />
     <nav>
       <a href="download.html">Download</a>
       <a href="merchants.html">Merchants</a>
       <a href="careers.html">Careers</a>
       <a href="about.html">About</a>
     </nav>
-    <a href="contact.html"><button class="join-btn">Join Now</button></a>
+    <a href="contact.html" class="join-btn">Join Now</a>
   </header>
 
   <section class="hero">
     <div class="hero-text">
       <h1>Simplifying Digital Payments<br>for Everyone</h1>
-      <p>Experience fast, secure, and easy-to-use payment solutions for your everyday transactions.</p>
+      <p>Experience fast, secure, and easy-to-use payment solutions for your everyday transactions with Momo Pe. From small shops to growing restaurants, we empower local businesses to accept digital payments seamlessly.</p>
       <div class="hero-buttons">
-        <button class="download" onclick="window.location.href='download.html'">Download APK</button>
-        <button class="learn" onclick="window.location.href='about.html'">Learn More</button>
+        <button class="download">Download APK</button>
+        <a href="contact.html"><button class="learn">Join Now</button></a>
       </div>
     </div>
     <img src="app-preview.jpg" alt="App Preview">
@@ -217,14 +196,23 @@
 
   <section class="section">
     <h2>Accept Payments with Momo Pe</h2>
-    <p>Join our growing network of merchants and offer seamless payment experiences to your customers.</p>
-    <a href="contact.html"><button class="join-now">Join Now</button></a>
+    <p>Join our growing network of merchants and offer seamless payment experiences to your customers. We help you grow faster, operate smarter, and delight your customers with effortless UPI and card payments.</p>
+    <a href="contact.html" class="join-now">Join Now</a>
   </section>
 
   <section class="section">
     <h2>Learn More About Our Story</h2>
-    <p>Discover our mission, vision, and the values that drive us to innovate in the digital payments space.</p>
-    <a href="about.html"><button class="learn-more">Learn More</button></a>
+    <p>Discover our mission, vision, and the values that drive us to innovate in the digital payments space. Momo Pe is committed to building a trustworthy and scalable infrastructure for modern Indian businesses.</p>
+    <a href="about.html" class="learn-more">Learn More</a>
+  </section>
+
+  <section class="clients">
+    <h3>Trusted By</h3>
+    <div class="clients-logos">
+      <img src="mandiking logo.png" alt="Mandi King">
+      <img src="Aroma Spices Logo.jpg" alt="Aroma Spices">
+      <img src="Bahar Cafe Logo.jpg" alt="Bahar Cafe">
+    </div>
   </section>
 
   <footer>
