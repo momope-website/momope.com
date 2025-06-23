@@ -5,8 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Momo Pe | Simplifying Digital Payments</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -18,52 +16,65 @@
     body {
       font-family: 'Inter', sans-serif;
       background-color: #0c0d23;
-      color: #ffffff;
+      color: #fff;
     }
 
     header {
+      background-color: #0c0d23;
+      padding: 1.5rem 4vw;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 4vw;
-      background-color: #0c0d23;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-    header img {
-      height: 42px;
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
 
-    nav a {
-      color: #ffffff;
-      margin: 0 1.5rem;
-      text-decoration: none;
-      font-weight: 500;
+    nav a:hover {
+      color: #00e676;
     }
 
     .join-btn {
-      background: #00e676;
-      color: #000000;
-      padding: 0.6rem 1.2rem;
+      background-color: #00e676;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
       border-radius: 6px;
       font-weight: 600;
-      border: none;
       cursor: pointer;
+      transition: transform 0.3s ease;
     }
 
     .join-btn:hover {
-      opacity: 0.9;
+      transform: scale(1.05);
     }
 
     .hero {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       padding: 5rem 4vw;
-      background: linear-gradient(145deg, #2a2c6d, #14152f);
-      flex-wrap: wrap;
+      background: linear-gradient(135deg, #292c6d, #191a36);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero-text {
@@ -72,44 +83,74 @@
 
     .hero h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
+      animation: slideRight 1s ease-in-out;
+    }
+
+    @keyframes slideRight {
+      from {
+        transform: translateX(-30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
 
     .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
       color: #d1d1d1;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
     }
 
     .hero-buttons button {
       margin-right: 1rem;
       padding: 0.7rem 1.4rem;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
       border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
     }
 
-    .btn-download {
-      background: #00e676;
-      color: #000000;
+    .download {
+      background-color: #00e676;
+      color: #000;
     }
 
-    .btn-learn {
-      background: #000000;
-      color: #ffffff;
+    .learn {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .hero-buttons button:hover {
+      transform: translateY(-2px);
     }
 
     .hero img {
-      height: 380px;
+      height: 350px;
       border-radius: 20px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      animation: scaleUp 1.5s ease-in-out;
+    }
+
+    @keyframes scaleUp {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     .section {
-      padding: 4rem 2rem;
-      background-color: #10122b;
       text-align: center;
+      padding: 4rem 2rem;
+      background-color: #131432;
+      animation: fadeIn 1.5s ease-in;
     }
 
     .section h2 {
@@ -118,73 +159,72 @@
     }
 
     .section p {
-      color: #cccccc;
+      color: #ccc;
       max-width: 700px;
       margin: 0 auto 2rem;
     }
 
-    .section .cta {
+    .section .join-now,
+    .section .learn-more {
       background-color: #00e676;
-      color: #000000;
+      color: #000;
+      border: none;
       padding: 0.7rem 1.4rem;
       border-radius: 4px;
       font-weight: 600;
-      border: none;
       cursor: pointer;
-      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .section .join-now:hover,
+    .section .learn-more:hover {
+      transform: translateY(-2px);
     }
 
     footer {
       background-color: #0c0d23;
       text-align: center;
       padding: 2rem;
-      color: #666;
       font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="logo.png" alt="Momo Pe Logo">
+    <img src="logo.png" alt="Momo Pe Logo" style="height: 40px;">
     <nav>
       <a href="download.html">Download</a>
       <a href="merchants.html">Merchants</a>
       <a href="careers.html">Careers</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
     </nav>
-    <a class="join-btn" href="contact.html">Join Now</a>
+    <a href="contact.html"><button class="join-btn">Join Now</button></a>
   </header>
 
   <section class="hero">
     <div class="hero-text">
-      <h1>Simplifying Digital Payments for Everyone</h1>
+      <h1>Simplifying Digital Payments<br>for Everyone</h1>
       <p>Experience fast, secure, and easy-to-use payment solutions for your everyday transactions.</p>
       <div class="hero-buttons">
-        <button class="btn-download">Download APK</button>
-        <button class="btn-learn" onclick="window.location.href='about.html'">Learn More</button>
+        <button class="download" onclick="window.location.href='download.html'">Download APK</button>
+        <button class="learn" onclick="window.location.href='about.html'">Learn More</button>
       </div>
     </div>
-    <img src="app-preview.jpg" alt="Momo Pe App Preview">
+    <img src="app-preview.jpg" alt="App Preview">
   </section>
 
   <section class="section">
     <h2>Accept Payments with Momo Pe</h2>
     <p>Join our growing network of merchants and offer seamless payment experiences to your customers.</p>
-    <a class="cta" href="contact.html">Join Now</a>
+    <a href="contact.html"><button class="join-now">Join Now</button></a>
   </section>
 
   <section class="section">
-    <h2>We're Hiring!</h2>
-    <p>Explore exciting opportunities and become part of our mission to digitize India’s economy.</p>
-    <a class="cta" href="careers.html">See Careers</a>
-  </section>
-
-  <section class="section">
-    <h2>Need Help or Have Questions?</h2>
-    <p>We're here to support you. Reach out to our team for inquiries, support, or partnerships.</p>
-    <a class="cta" href="contact.html">Contact Us</a>
+    <h2>Learn More About Our Story</h2>
+    <p>Discover our mission, vision, and the values that drive us to innovate in the digital payments space.</p>
+    <a href="about.html"><button class="learn-more">Learn More</button></a>
   </section>
 
   <footer>
