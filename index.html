@@ -17,6 +17,7 @@
       font-family: 'Inter', sans-serif;
       background-color: #0c0d23;
       color: #fff;
+      line-height: 1.6;
     }
 
     header {
@@ -131,7 +132,31 @@
       border-radius: 4px;
       font-weight: 600;
       cursor: pointer;
-      text-decoration: none;
+    }
+
+    .clients {
+      background-color: #0c0d23;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .clients h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .client-logos {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .client-logos img {
+      height: 80px;
+      border-radius: 8px;
+      background-color: #fff;
+      padding: 0.5rem;
     }
 
     footer {
@@ -148,13 +173,12 @@
   <header>
     <img src="logo.png" alt="Momo Pe Logo" />
     <nav>
-      <a href="index.html">Home</a>
       <a href="download.html">Download</a>
       <a href="merchants.html">Merchants</a>
       <a href="careers.html">Careers</a>
       <a href="about.html">About</a>
     </nav>
-    <a class="join-btn" href="contact.html">Join Now</a>
+    <a href="contact.html" class="join-btn">Join Now</a>
   </header>
 
   <section class="hero">
@@ -172,13 +196,22 @@
   <section class="section">
     <h2>Accept Payments with Momo Pe</h2>
     <p>Join our growing network of merchants and offer seamless payment experiences to your customers.</p>
-    <a class="join-now" href="contact.html">Join Now</a>
+    <a href="contact.html" class="join-now">Join Now</a>
   </section>
 
   <section class="section">
     <h2>Learn More About Our Story</h2>
     <p>Discover our mission, vision, and the values that drive us to innovate in the digital payments space.</p>
-    <a class="learn-more" href="about.html">Learn More</a>
+    <a href="about.html" class="learn-more">Learn More</a>
+  </section>
+
+  <section class="clients">
+    <h2>Trusted by Top Clients</h2>
+    <div class="client-logos">
+      <img src="mandiking logo.png" alt="Mandi King" />
+      <img src="Aroma Spices Logo.jpg" alt="Aroma Spices" />
+      <img src="Bahar Cafe Logo.jpg" alt="Bahar Cafe" />
+    </div>
   </section>
 
   <footer>
